@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-#72bym15r4e&z4b$v4!t2o2(q^60wyi6-2h$l6^b@hn&t9fn7w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.fly.dev', '*']
+ALLOWED_HOSTS = ['IsmarWolf.pythonanywhere.com', '*']
 
 
 # Application definition
@@ -79,8 +79,11 @@ WSGI_APPLICATION = 'projeto.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'IsmarWolf$default',
+        'USER': 'IsmarWolf',
+        'PASSWORD': 'sua_senha_mysql',
+        'HOST': 'IsmarWolf.mysql.pythonanywhere-services.com',
     }
 }
 DATABASE_URL = os.getenv('DATABASE_URL', 'sqlite:///db.sqlite3')
